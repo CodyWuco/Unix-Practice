@@ -1,0 +1,108 @@
+Script started on Fri 17 May 2019 04:23:55 AM PDT
+[wucoc@athena:21]> gcc lab10.c -Wall
+[wucoc@athena:22]> a.out
+[CodyShell]> ls > lsout
+Argc = 3
+Argv 0 = ls
+Argv 1 = >
+Argv 2 = lsout
+Child returned status: 0
+[CodyShell]> cat lsout
+Argc = 2
+Argv 0 = cat
+Argv 1 = lsout
+a.out
+CodyWuco_lab10.txt
+execvp.c
+lab10.c
+lsout
+redir.c
+waitpid.c
+Child returned status: 0
+[CodyShell]> ls > lsout > file1
+Argc = 5
+Argv 0 = ls
+Argv 1 = >
+Argv 2 = lsout
+Argv 3 = >
+Argv 4 = file1
+Cannot output to more than one file.
+Child returned status: 256
+[CodyShell]> cat foo.txt
+Argc = 2
+Argv 0 = cat
+Argv 1 = foo.txt
+cat: foo.txt: No such file or directory
+Child returned status: 256
+[CodyShell]> > lsout
+Argc = 2
+Argv 0 = >
+Argv 1 = lsout
+No command entered.
+Child returned status: 256
+[CodyShell]> < lsout
+Argc = 2
+Argv 0 = <
+Argv 1 = lsout
+No command entered.
+Child returned status: 256
+[CodyShell]> wc < lsout
+Argc = 3
+Argv 0 = wc
+Argv 1 = <
+Argv 2 = lsout
+ 7  7 66
+Child returned status: 0
+[CodyShell]> wc < lsout > wcout
+Argc = 5
+Argv 0 = wc
+Argv 1 = <
+Argv 2 = lsout
+Argv 3 = >
+Argv 4 = wcout
+Child returned status: 0
+[CodyShell]> cat wcout
+Argc = 2
+Argv 0 = cat
+Argv 1 = wcout
+ 7  7 66
+Child returned status: 0
+[CodyShell]> wc < lsout < wcout
+Argc = 5
+Argv 0 = wc
+Argv 1 = <
+Argv 2 = lsout
+Argv 3 = <
+Argv 4 = wcout
+Cannot input from more than one file.
+Child returned status: 256
+[CodyShell]> cd >>/   //  ../lab1
+Argc = 2
+Argv 0 = cd
+Argv 1 = ../lab1
+[CodyShell]> gcc lab1.c
+Argc = 2
+Argv 0 = gcc
+Argv 1 = lab1.c
+Child returned status: 0
+[CodyShell]> a.out
+Argc = 1
+Argv 0 = a.out
+
+Lab 1 
+
+Hello World
+Hi, Cody Wuco 
+
+When something is important enough, you do it even if the odds are not in your 
+favor. 
+-Elon Musk 
+
+Child returned status: 3328
+[CodyShell]> exit
+Argc = 1
+Argv 0 = exit
+[wucoc@athena:23]> exit
+exit
+
+Script done on Fri 17 May 2019 04:27:19 AM PDT

@@ -1,0 +1,210 @@
+Script started on Tue 19 Feb 2019 08:37:25 PM PST
+[wucoc@sp2:3]> histr[Kory -c
+[wucoc@sp2:4]> cd csc60
+[wucoc@sp2:5]> mkdir lab2
+mkdir: cannot create directory `lab2': File exists
+[wucoc@sp2:6]> cd lab2
+[wucoc@sp2:7]> pwd
+/gaia/class/student/wucoc/csc60/lab2
+[wucoc@sp2:8]> mkdir aaa
+cd[wucoc@sp2:9]> cd aaa
+[wucoc@sp2:10]> pwd
+/gaia/class/student/wucoc/csc60/lab2/aaa
+[wucoc@sp2:11]> cd ..
+[wucoc@sp2:12]> pwd
+/gaia/class/student/wucoc/csc60/lab2
+[wucoc@sp2:13]> ls > file1
+[wucoc@sp2:14]> cat file1
+aaa/
+file1
+wc
+[wucoc@sp2:15]> less file1
+[?1049h[?1h=aaa/
+file1
+wc
+[7mfile1 (END) [27m[K[K[?1l>[?1049l[wucoc@sp2:16]> file *
+aaa:   setgid directory
+file1: ASCII text
+wc:    empty
+[wucoc@sp2:17]> wc file1
+ 3  3 14 file1
+[wucoc@sp2:18]> wc *
+wc: aaa: Is a directory
+      0       0       0 aaa
+      3       3      14 file1
+      0       0       0 wc
+      3       3      14 total
+[wucoc@sp2:19]> grep lab file1
+[wucoc@sp2:20]> cp file1 file2
+[wucoc@sp2:21]> lc[Ks
+aaa/  file1  file2  wc
+[wucoc@sp2:22]> cd aaa
+[wucoc@sp2:23]> cp ../file1
+cp: missing destination file operand after `../file1'
+Try `cp --help' for more information.
+[wucoc@sp2:24]> cp ../file1 .
+[wucoc@sp2:25]> ls
+file1
+[wucoc@sp2:26]> mv file1 file2
+ls[wucoc@sp2:27]> ls
+file2
+[wucoc@sp2:28]> mv ../file1 .
+[wucoc@sp2:29]> cd..
+cd..: Command not found.
+[wucoc@sp2:30]> cd ..
+[wucoc@sp2:31]> ls
+aaa/  file2  wc
+[wucoc@sp2:32]> cmp fil[K[K[K[K[K[Kcd aaa
+[wucoc@sp2:33]> ls
+file1  file2
+[wucoc@sp2:34]> pwd
+/gaia/class/student/wucoc/csc60/lab2/aaa
+[wucoc@sp2:35]> cmp file1 file2
+[wucoc@sp2:36]> ls > aaalist
+[wucoc@sp2:37]> cmp file1 aaalist
+file1 aaalist differ: byte 4, line 1
+[wucoc@sp2:38]> diff file1 aaalist
+1c1
+< aaa/
+---
+> aaalist
+3c3
+< wc
+---
+> file2
+[wucoc@sp2:39]> rm file1
+[wucoc@sp2:40]> ls
+aaalist  file2
+[wucoc@sp2:41]> ps -u
+Warning: bad syntax, perhaps a bogus '-'? See /usr/share/doc/procps-3.2.8/FAQ
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+wucoc    22182  0.0  0.0 116752  2040 pts/0    Ss   20:20   0:00 -csh
+wucoc    22853  0.0  0.0 107132   832 pts/0    S+   20:37   0:00 script CodyWuco
+wucoc    22855  0.0  0.0 107644   404 pts/0    S+   20:37   0:00 script CodyWuco
+wucoc    22856  0.0  0.0 110380  1808 pts/1    Ss   20:37   0:00 -sh -i
+wucoc    23072  0.0  0.0 114488  1288 pts/1    R+   20:43   0:00 ps -u
+[wucoc@sp2:42]> ps-l
+ps-l: Command not found.
+[wucoc@sp2:43]> ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  8414 22856 22855  0  80   0 - 27595 sys_rt pts/1    00:00:00 csh
+0 R  8414 23079 22856  0  80   0 - 27036 -      pts/1    00:00:00 ps
+[wucoc@sp2:44]> !!
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  8414 22856 22855  0  80   0 - 27595 sys_rt pts/1    00:00:00 csh
+0 R  8414 23081 22856  0  80   0 - 27036 -      pts/1    00:00:00 ps
+[wucoc@sp2:45]> history
+     4	20:37	cd csc60
+     5	20:37	mkdir lab2
+     6	20:37	cd lab2
+     8	20:38	mkdir aaa
+    13	20:38	ls > file1
+    14	20:38	cat file1
+    15	20:38	less file1
+    16	20:39	file *
+    17	20:39	wc file1
+    18	20:39	wc *
+    19	20:39	grep lab file1
+    20	20:39	cp file1 file2
+    23	20:40	cp ../file1
+    24	20:40	cp ../file1 .
+    26	20:40	mv file1 file2
+    28	20:40	mv ../file1 .
+    29	20:40	cd..
+    30	20:41	cd ..
+    32	20:41	cd aaa
+    34	20:42	pwd
+    35	20:42	cmp file1 file2
+    36	20:42	ls > aaalist
+    37	20:42	cmp file1 aaalist
+    38	20:43	diff file1 aaalist
+    39	20:43	rm file1
+    40	20:43	ls
+    41	20:43	ps -u
+    42	20:43	ps-l
+    44	20:44	ps -l
+    45	20:44	history
+[wucoc@sp2:46]> cd ../..
+[wucoc@sp2:47]> pwd
+/gaia/class/student/wucoc/csc60
+[wucoc@sp2:48]> cd lab1
+[wucoc@sp2:49]> head lab1.c
+/*------------------------------*/
+/*Cody Wuco---------------------*/
+/*Lab 1-------------------------*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    printf("\nLab 1 \n\n");
+[wucoc@sp2:50]> q[Kq
+q: Command not found.
+[wucoc@sp2:51]> tail lab1.c
+
+int main(void)
+{
+    printf("\nLab 1 \n\n");
+    printf("Hello World\n");
+    printf("Hi, Cody Wuco \n\n");
+    printf("When something is important enough, you do it even if the odds are not in your \nfavor. \n");
+    printf("-Elon Musk \n\n");
+}
+/*-----------------------------*/
+[wucoc@sp2:52]> q wasn't needed
+Unmatched '.
+[wucoc@sp2:53]> ls -al | less
+[?1049h[?1h=total 24
+drwx--S--- 2 wucoc@ecs.csus.edu stdcsc 4096 Feb 12 19:00 ./
+drwx--S--- 4 wucoc@ecs.csus.edu stdcsc 4096 Feb 19 20:29 ../
+-rwx------ 1 wucoc@ecs.csus.edu stdcsc 4822 Feb 12 18:58 a.out*
+-rw------- 1 wucoc@ecs.csus.edu stdcsc  407 Feb 12 18:58 CodyWuco_Lab1.txt
+-rw------- 1 wucoc@ecs.csus.edu stdcsc  427 Feb 12 18:56 lab1.c
+[7m(END) [27m[K[K[?1l>[?1049l[wucoc@sp2:54]> history
+     4	20:37	cd csc60
+     5	20:37	mkdir lab2
+     6	20:37	cd lab2
+     8	20:38	mkdir aaa
+    13	20:38	ls > file1
+    14	20:38	cat file1
+    15	20:38	less file1
+    16	20:39	file *
+    17	20:39	wc file1
+    18	20:39	wc *
+    19	20:39	grep lab file1
+    20	20:39	cp file1 file2
+    23	20:40	cp ../file1
+    24	20:40	cp ../file1 .
+    26	20:40	mv file1 file2
+    28	20:40	mv ../file1 .
+    29	20:40	cd..
+    30	20:41	cd ..
+    32	20:41	cd aaa
+    35	20:42	cmp file1 file2
+    36	20:42	ls > aaalist
+    37	20:42	cmp file1 aaalist
+    38	20:43	diff file1 aaalist
+    39	20:43	rm file1
+    40	20:43	ls
+    41	20:43	ps -u
+    42	20:43	ps-l
+    44	20:44	ps -l
+    46	20:44	cd ../..
+    47	20:44	pwd
+    48	20:44	cd lab1
+    49	20:44	head lab1.c
+    50	20:45	q
+    51	20:45	tail lab1.c
+    52	20:45	q wasn't needed
+    53	20:46	ls -al | less
+    54	20:46	history
+[wucoc@sp2:55]> exit
+exit
+
+Script done on Tue 19 Feb 2019 08:46:35 PM PST
+Script started on Tue 19 Feb 2019 08:48:48 PM PST
+[wucoc@sp2:21]> ^Dexit
+
+Script done on Tue 19 Feb 2019 08:48:55 PM PST

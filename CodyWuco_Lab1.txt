@@ -1,0 +1,19 @@
+Script started on Tue 12 Feb 2019 06:58:16 PM PST
+[wucoc@athena:1]> gcclab1.c
+gcclab1.c: Command not found.
+[wucoc@athena:2]> gcclab1.c[1@ 
+[wucoc@athena:3]> a.out
+
+Lab 1 
+
+Hello World
+Hi, Cody Wuco 
+
+When something is important enough, you do it even if the odds are not in your 
+favor. 
+-Elon Musk 
+
+[wucoc@athena:4]> exit
+exit
+
+Script done on Tue 12 Feb 2019 06:58:55 PM PST

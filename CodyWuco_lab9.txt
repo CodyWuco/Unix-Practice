@@ -1,0 +1,44 @@
+Script started on Thu 16 May 2019 11:54:31 PM PDT
+[wucoc@athena:21]> gcc lab9.c -Wall
+lab9.c: In function ‘main’:
+lab9.c:42: warning: unused variable ‘pid’
+lab9.c:41: warning: unused variable ‘status’
+[wucoc@athena:22]> a.out
+[CodyShell]> 
+Argc = 0
+[CodyShell]>  
+Argc = 0
+[CodyShell]> pwd
+Argc = 1
+Argv 0 = pwd
+/gaia/class/student/wucoc/csc60/lab9
+[CodyShell]> cd ..
+Argc = 2
+Argv 0 = cd
+Argv 1 = ..
+[CodyShell]> pwd
+Argc = 1
+Argv 0 = pwd
+/gaia/class/student/wucoc/csc60
+[CodyShell]> cd lab9
+Argc = 2
+Argv 0 = cd
+Argv 1 = lab9
+[CodyShell]> pwd
+Argc = 1
+Argv 0 = pwd
+/gaia/class/student/wucoc/csc60/lab9
+[CodyShell]> cd
+Argc = 1
+Argv 0 = cd
+[CodyShell]> pwd
+Argc = 1
+Argv 0 = pwd
+/gaia/class/student/wucoc
+[CodyShell]> exit
+Argc = 1
+Argv 0 = exit
+[wucoc@athena:23]> exit
+exit
+
+Script done on Thu 16 May 2019 11:55:40 PM PDT

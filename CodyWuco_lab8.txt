@@ -1,0 +1,31 @@
+Script started on Tue 16 Apr 2019 09:15:55 PM PDT
+[wucoc@athena:21]> gcc lab8.c
+[wucoc@athena:22]> a.out
+
+Cody Wuco.  Lab 8.
+
+Enter an unsigned integer value (0 to stop):  7
+
+Enter an integer value for the left shift:  4
+
+Original is 7 
+0000 0000 0000 0000 0000 0000 0000 0111 
+0000 0000 0000 0000 0000 0000 0111 0000 
+Shifted it is 112 
+
+Enter an unsigned integer value (0 to stop):  7
+
+Enter an integer value for the left shift:  8
+
+Original is 7 
+0000 0000 0000 0000 0000 0000 0000 0111 
+0000 0000 0000 0000 0000 0111 0000 0000 
+Shifted it is 1792 
+
+Enter an unsigned integer value (0 to stop):  0
+
+
+[wucoc@athena:23]> exit
+exit
+
+Script done on Tue 16 Apr 2019 09:16:28 PM PDT
